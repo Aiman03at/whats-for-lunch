@@ -14,7 +14,26 @@
  */
 
 const whatToDoForLunch = function(hungry, availableTime) {
-  console.log("I don't know what to do!");
+  if(!hungry)
+    {
+  console.log("Get back to work");
+    }
+    else
+    {
+      if(availableTime < 20)
+        {
+        console.log("Pick up something and eat it in the lab");
+      }
+      if(availableTime >= 20 && availableTime < 30)
+        {
+        console.log("Try a place nearby")
+        }
+        if(availableTime > 30)
+          {
+            console.log(" You are bootcamp and that you should reconsider how much time you actually have to spare")
+          }
+    }
+
 }
 
 
@@ -23,17 +42,19 @@ const whatToDoForLunch = function(hungry, availableTime) {
  * defined above to verify we're making the right decisions. Do not modify it!
  */
 
-console.log("I'm hungry and I have 20 minutes for lunch.");
+
+
+console.log("I'm hungry and I have 20 minutes for lunch.\n");
 whatToDoForLunch(true, 20);
 console.log("---");
 
-console.log("I'm hungry and I have 50 minutes for lunch.");
+console.log("I'm hungry and I have 50 minutes for lunch.\n");
 whatToDoForLunch(true, 50);
 console.log("---");
 
-console.log("I'm not hungry and I have 30 minutes for lunch.");
+console.log("I'm not hungry and I have 30 minutes for lunch.\n");
 whatToDoForLunch(false, 30);
 console.log("---");
 
-console.log("I'm hungry and I have 15 minutes for lunch.");
+console.log("I'm hungry and I have 15 minutes for lunch.\n");
 whatToDoForLunch(true, 15);
